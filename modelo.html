@@ -8,30 +8,38 @@
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="estilo.css">
   <title>BeachTrip</title>
 </head>
 
 <body>
-  <div class="container">
-    <div class="jumbotron">
-      <h1>Só na BeachTrip, Destinos Imperdíveis!</h1>
-      <img class="d-block w-100" src="img/Borcelle.png" alt="Ilhabela">
-    </div>
-    <hr>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="modelo.html">Home</a>
+  
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark navegacao">
+    <section>
+      <div>
+        <a class="navbar-brand" href="modelo.html"><img src="img/logo.png" alt=""></a>
+      </div>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Alterna navegação">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a class="nav-item nav-link active" href="forms.html">Cadastro <span class="sr-only">(Página atual)</span></a>
-          <a class="nav-item nav-link" href="precos.html">Preços</a>
-
-        </div>
-      </div>
-    </nav>
-    <hr>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav icones-div">
+            <a class="nav-item nav-link icones" href="precos.html"> 
+             <span>Pacotes</span>
+             <img src="img/viagem.png" alt="">
+           </a>
+            <a class="nav-item nav-link icones" href="forms.html" >
+             <span> Entre ou Cadastre-se</span>
+             <img src="img/adicionar-usuario.png" alt="">
+           </a>
+          </div>
+       </div>
+    </section>
+    
+   </nav>
+  
+  <div class="container">
+    
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
