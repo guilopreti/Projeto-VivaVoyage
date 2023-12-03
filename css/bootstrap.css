@@ -104,7 +104,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 p {
   margin-top: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 0px;
 }
 
 abbr[title],
@@ -379,27 +379,33 @@ template {
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  margin-bottom: 0.5rem;
+  margin-bottom: 20px;
   font-family: 'Playfair Display', serif;
   font-weight: 500;
-  line-height: 1.2;
+  line-height: 40px;
   color: inherit;
+  text-align: justify;
 }
 
 h1, .h1 {
   font-size: 2.5rem;
+  margin: 20px;
 }
 
 h2, .h2 {
   font-size: 2rem;
+  text-indent: 15px;
 }
 
 h3, .h3 {
   font-size: 1.75rem;
+  text-align: center;
+  color: white;
 }
 
 h4, .h4 {
   font-size: 1.5rem;
+  margin-bottom: 0px;
 }
 
 h5, .h5 {
@@ -4388,7 +4394,8 @@ input[type="button"].btn-block {
 }
 
 .card {
-  position: relative;
+  width: auto;
+  height: auto;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
@@ -4401,6 +4408,11 @@ input[type="button"].btn-block {
   border-radius: 0.25rem;
   margin-bottom: 2rem;
 }
+
+.tag{
+  background-color:#84B7EC ;
+}
+
 
 .card > hr {
   margin-right: 0;
@@ -4424,7 +4436,7 @@ input[type="button"].btn-block {
 }
 
 .card-title {
-  margin-bottom: 0.75rem;
+  margin-bottom: 0px;
 }
 
 .card-subtitle {
@@ -4432,8 +4444,13 @@ input[type="button"].btn-block {
   margin-bottom: 0;
 }
 
+.card-text{
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
 .card-text:last-child {
-  margin-bottom: 0;
+  margin-bottom: 0px;
 }
 
 .card-link:hover {
@@ -4496,8 +4513,11 @@ input[type="button"].btn-block {
 }
 
 .card-img-top {
-  max-width: 253px;
-  max-height: 169px;
+  margin: 30px;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  max-width: 200px;
+  max-height: 200px;
   width: 100%;
   border-top-left-radius: calc(0.25rem - 1px);
   border-top-right-radius: calc(0.25rem - 1px);
@@ -9063,4 +9083,5 @@ a.text-dark:hover, a.text-dark:focus {
     border-color: #dee2e6;
   }
 }
+
 /*# sourceMappingURL=bootstrap.css.map */

@@ -27,7 +27,7 @@ nav img {
 }
 
 .icones {
-    width: 208px;
+    width: auto;
     display: flex;
     gap: 15px;
 }
@@ -43,3 +43,10 @@ nav img {
         justify-content: flex-end;
     }
 }
+
+.sobre-viagem{
+    width: 500px;
+    height: 300px;
+    margin: 20px;
+    float: right;
+  }
