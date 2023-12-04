@@ -101,7 +101,7 @@ nav img {
 .main_footer   { background-color:#84B7EC; color:#fff; font-size:1em; }
 
 .main_footer .content { float:left; width:80%; margin:0 10%; padding: 1rem 0; }
-.container { float:left; width:100%; }
+.footer_container { float:left; width:100%; }
 .colfooter { 
  
   width:100%; 
