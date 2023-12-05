@@ -2,58 +2,70 @@
 <html lang="pt-br">
   <head>
     <!-- Meta tags Obrigatórias -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="estilo.css" />
 
     <title>Preços</title>
- </head>
-<body>
-  
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark navegacao">
-    <section>
-      <div>
-        <a class="navbar-brand" href="modelo.html"><img src="img/logo.png" alt=""></a>
-      </div>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Alterna navegação">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark navegacao">
+      <section>
+        <div>
+          <a class="navbar-brand" href="modelo.html"
+            ><img src="img/logo.png" alt=""
+          /></a>
+        </div>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Alterna navegação"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav icones-div">
-            <a class="nav-item nav-link icones" href="sobre.html" >
+            <a class="nav-item nav-link icones" href="sobre.html">
               <span>Sobre nós</span>
-              <img src="img/quem_somos.png" alt="">
+              <img src="img/quem_somos.png" alt="" />
             </a>
 
-            <a class="nav-item nav-link icones" href="precos.html"> 
-             <span>Pacotes</span>
-             <img src="img/viagem.png" alt="">
-           </a>
-            <a class="nav-item nav-link icones" href="forms.html" >
-             <span> Entre ou Cadastre-se</span>
-             <img src="img/adicionar-usuario.png" alt="">
-           </a>
-
+            <a class="nav-item nav-link icones" href="precos.html">
+              <span>Pacotes</span>
+              <img src="img/viagem.png" alt="" />
+            </a>
+            <a class="nav-item nav-link icones" href="forms.html">
+              <span> Entre ou Cadastre-se</span>
+              <img src="img/adicionar-usuario.png" alt="" />
+            </a>
           </div>
-       </div>
-    </section>
-  </nav>
-  
-  <div class="container">
-    <div class="jumbotron1">
-          <h1 class="precosize2">Promoções para Cancun! </h1>
+        </div>
+      </section>
+    </nav>
+
+    <div class="container">
+      <div class="jumbotron1">
+        <h1 class="precosize2">Promoções para Cancun!</h1>
       </div>
 
-<table class="table table-striped">
+      <table class="table table-striped">
         <thead>
           <tr>
             <th scope="col">#</th>
             <th scope="col">Hotel</th>
             <th scope="col">Dias</th>
             <th scope="col">Valor</th>
+            <th scope="col">Quantidade</th>
           </tr>
         </thead>
         <tbody>
@@ -62,98 +74,188 @@
             <td>Iberostar Beachfront</td>
             <td>4 dias</td>
             <td>R$2.500,00</td>
+            <td class="quantity-column">
+              <button class="quantity-button" onclick="aumentar(this)">
+                +
+              </button>
+              <span>0</span>
+              <button class="quantity-button" onclick="diminuir(this)">
+                -
+              </button>
+            </td>
           </tr>
           <tr>
             <th scope="row">2</th>
             <td>Iberostar Beachfront</td>
             <td>6 dias</td>
             <td>R$3.500,00</td>
+            <td class="quantity-column">
+              <button class="quantity-button" onclick="aumentar(this)">
+                +
+              </button>
+              <span>0</span>
+              <button class="quantity-button" onclick="diminuir(this)">
+                -
+              </button>
+            </td>
           </tr>
           <tr>
             <th scope="row">3</th>
             <td>Iberostar Beachfront</td>
             <td>8 dias</td>
             <td>R$5.500,00</td>
+            <td class="quantity-column">
+              <button class="quantity-button" onclick="aumentar(this)">
+                +
+              </button>
+              <span>0</span>
+              <button class="quantity-button" onclick="diminuir(this)">
+                -
+              </button>
+            </td>
           </tr>
         </tbody>
       </table>
 
       <h1 class="precosize">Pacotes por pessoa.</h1>
 
-      <a class="btn btn-primary" href="carregamentotela.html" role="">Escolher meu Pacote</a>
+      <p id="total">
+        Valor da compra atual: R$ <span id="valorTotal">0</span>,00
+      </p>
 
-      
-      
+      <a class="btn btn-primary" href="carregamentotela.html" role=""
+        >Escolher meu Pacote</a
+      >
     </div>
 
     <!--Inicio Footer-->
-   
+
     <div class="custom-shape-divider-bottom-1683068753">
-      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-          <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+      <svg
+        data-name="Layer 1"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1200 120"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+          class="shape-fill"
+        ></path>
       </svg>
     </div>
-  
-  <footer class="main_footer footer_container">
-      
-      <div class="content">
-          
-          <div class="colfooter">
-              
-              <h4 class="titleFooter"> Menu</h4>
-              
-              <ul>
-              
-                <li><a href="#" title="Página Inícial">Página Inícial</a></li>
-                <li><a href="sobre.html" title="Sobre a Empresa">Sobre a Empresa</a></li>
-                <li><a href="#" title="Galeria de Fotos">Galeria de Fotos</a></li>
-                <li><a href="#" title="Fale Conosco">Fale Conosco</a></li>
-              
-              </ul>
-          
-          </div><!--Col Footer 1-->        
-          
-          <div class="colfooter">
-             
-             <h4 class="titleFooter"> Contato</h4>
-             <p><i class="icon icon-mail"></i> contato@vivavoyage.com.br</p>
-             <p><i class="icon icon-phone"></i> (11) 4002-8922</p>
-             <p><i class="icon icon-whatsapp"></i> (11) 957169-3589</p>
-          
-          </div><!--Col Footer 2-->
-          
-  
-          <div class="colfooter">
-             
-             <h4 class="titleFooter"> Redes Sociais</h4>
-              
-             <a href="#" class="botao"><span> <i class="icon icon-facebook"></i> </span></a>            
-             <a href="#" class="botao"><span> <i class="icon icon-instagram"></i> </span></a>            
-             <a href="#" class="botao"><span> <i class="icon icon-twitter"></i> </span></a>            
-             <a href="#" class="botao"><span> <i class="icon icon-pinterest"></i> </span></a>            
-          
-          </div><!--Col Footer 3-->
-          
-          <div class="clear"></div>
-      
-      </div><!--Contant-->
-      
-      <div class="main_footer_copy">
-          
-          <p class="m-b-footer"> VivaVoyage - Te levamos para longe!.</p> 
-          
-      
-      </div>
-  
-  </footer>
-  
-  <!--Fecha Footer-->
-   <!-- JavaScript (Opcional) -->
-    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
-</body>
- 
+    <footer class="main_footer footer_container">
+      <div class="content">
+        <div class="colfooter">
+          <h4 class="titleFooter">Menu</h4>
+
+          <ul>
+            <li><a href="#" title="Página Inícial">Página Inícial</a></li>
+            <li>
+              <a href="sobre.html" title="Sobre a Empresa">Sobre a Empresa</a>
+            </li>
+            <li><a href="#" title="Galeria de Fotos">Galeria de Fotos</a></li>
+            <li><a href="#" title="Fale Conosco">Fale Conosco</a></li>
+          </ul>
+        </div>
+        <!--Col Footer 1-->
+
+        <div class="colfooter">
+          <h4 class="titleFooter">Contato</h4>
+          <p><i class="icon icon-mail"></i> contato@vivavoyage.com.br</p>
+          <p><i class="icon icon-phone"></i> (11) 4002-8922</p>
+          <p><i class="icon icon-whatsapp"></i> (11) 957169-3589</p>
+        </div>
+        <!--Col Footer 2-->
+
+        <div class="colfooter">
+          <h4 class="titleFooter">Redes Sociais</h4>
+
+          <a href="#" class="botao"
+            ><span> <i class="icon icon-facebook"></i> </span
+          ></a>
+          <a href="#" class="botao"
+            ><span> <i class="icon icon-instagram"></i> </span
+          ></a>
+          <a href="#" class="botao"
+            ><span> <i class="icon icon-twitter"></i> </span
+          ></a>
+          <a href="#" class="botao"
+            ><span> <i class="icon icon-pinterest"></i> </span
+          ></a>
+        </div>
+        <!--Col Footer 3-->
+
+        <div class="clear"></div>
+      </div>
+      <!--Contant-->
+
+      <div class="main_footer_copy">
+        <p class="m-b-footer">VivaVoyage - Te levamos para longe!.</p>
+      </div>
+    </footer>
+
+    <!--Fecha Footer-->
+    <!-- JavaScript (Opcional) -->
+    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      const aumentar = (button) => {
+        const linha = button.closest("tr");
+        const quantidadeSpan = linha.querySelector("span");
+        const quantidadeAtual = Number(quantidadeSpan.innerText);
+        quantidadeSpan.innerText = quantidadeAtual + 1;
+
+        const totalSpan = document.getElementById("valorTotal");
+        const totalAtual = Number(totalSpan.innerText);
+        const pacoteValor = Number(
+          linha
+            .querySelector("td:nth-child(4)")
+            .innerText.replace("R$", "")
+            .replace(",00", "")
+            .replace(".", ""),
+        );
+
+        totalSpan.innerText = totalAtual + pacoteValor;
+      };
+
+      const diminuir = (button) => {
+        const linha = button.closest("tr");
+        const quantidadeSpan = linha.querySelector("span");
+        const quantidadeAtual = Number(quantidadeSpan.innerText);
+        if (quantidadeAtual > 0) {
+          quantidadeSpan.innerText = quantidadeAtual - 1;
+
+          const totalSpan = document.getElementById("valorTotal");
+          const totalAtual = Number(totalSpan.innerText);
+          const pacoteValor = Number(
+            linha
+              .querySelector("td:nth-child(4)")
+              .innerText.replace("R$", "")
+              .replace(",00", "")
+              .replace(".", ""),
+          );
+
+          if (totalAtual - pacoteValor >= 0) {
+            totalSpan.innerText = totalAtual - pacoteValor;
+          }
+        }
+      };
+    </script>
+  </body>
 </html>
