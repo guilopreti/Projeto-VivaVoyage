@@ -1,14 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="carregamento.css" media="screen" />
-
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="carregamento.css"
+      media="screen"
+    />
+  </head>
+  <body>
     <div class="c-loader"></div>
-    <h6>Por favor, aguarde.</h6>
-</body>
+    <h2>Por favor, aguarde.</h2>
+
+    <section id="modal-section">
+      <div class="modal-div">
+        <div class="modal-title-div">
+          <h3>Obrigado por nos escolher!</h3>
+          <a href="modelo.html">X</a>
+        </div>
+
+        <p>
+          Enviamos um email contendo mais instruções e informações sobre o
+          pagamento. Obrigado pro comprar com a VivaVoyage! Tenha uma boa
+          viagem!!
+        </p>
+
+        <div class="modal-close-div">
+          <a href="modelo.html">Fechar</a>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      const modal = document.getElementById("modal-section");
+
+      setTimeout(() => (modal.style.opacity = 1), 2000);
+    </script>
+  </body>
 </html>
