@@ -34,8 +34,8 @@
                  <span>Pacotes</span>
                  <img src="img/viagem.png" alt="">
                </a>
-                <a class="nav-item nav-link icones" href="forms.html" >
-                 <span> Entre ou Cadastre-se</span>
+                <a class="nav-item nav-link icones" href="login.html" >
+                 <span class="loginLabel"> Entre ou Cadastre-se</span>
                  <img src="img/adicionar-usuario.png" alt="">
                </a>
     
@@ -47,89 +47,86 @@
   <div class="container">
     
       <h1 class="cadsize">Cadastre-se inserindo seus dados.</h1>
+
+    <div class="required-fields"></div>
     
-    <form>
+    <form id="register" method="post" onsubmit="register(event)">
+      <input type="hidden" name="action" value="cadastro">
 
       <div class="form-row">
-        <div class="form-group col-md-6">
-          <label for="inputEmail4">Email</label>
-          <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+        <div class="form-group col-md-4">
+          <label for="inputNome4">Nome</label>
+          <input type="text" class="form-control" id="inputEmail4" name="nome" placeholder="Nome" required>
+        </div>
+        <div class="form-group col-md-4">
+           <label for="inputEmail4">Email</label>
+           <input type="email" class="form-control" id="inputEmail4" name="email" placeholder="Email" required>
         </div>
 
-        <div class="form-group col-md-6">
+
+        <div class="form-group col-md-4">
           <label for="inputPassword4">Senha</label>
-          <input type="password" class="form-control" id="inputPassword4" placeholder="Senha">
+          <input type="password" class="form-control" id="inputPassword4" name="senha" placeholder="Senha" required>
         </div>
       </div>
 
       <div class="form-group">
         <label for="inputAddress">Endereço</label>
-        <input type="text" class="form-control" id="inputAddress" placeholder="Rua, nº ">
+        <input type="text" class="form-control" id="inputAddress" name="rua" placeholder="Rua, nº " required>
       </div>
 
       <div class="form-group">
         <label for="inputAddress2">Endereço 2</label>
-        <input type="text" class="form-control" id="inputAddress2" placeholder="Apartamento, hotel, casa, etc.">
+        <input type="text" class="form-control" id="inputAddress2" name="logradouro" placeholder="Apartamento, hotel, casa, etc." required>
       </div>
 
       <div class="form-row">
         <div class="form-group col-md-6">
           <label for="inputCity">Cidade</label>
-          <input type="text" class="form-control" id="inputCity">
+          <input type="text" class="form-control" id="inputCity" name="cidade" required>
         </div>
 
         <div class="form-group col-md-4">
           <label for="inputEstado">Estado</label>
-          <select id="inputEstado" class="form-control">
-            <option selected>AM</option>
-            <option selected>AC</option>
-            <option selected>AP</option>
-            <option selected>AL</option>
-            <option selected>BA</option>
-            <option selected>CE</option>
-            <option selected>GO</option>
-            <option selected>MT</option>
-            <option selected>MS</option>
-            <option selected>SE</option>
-            <option selected>DF</option>
-            <option selected>SC</option>
-            <option selected>SP</option>
-            <option selected>TO</option>
-            <option selected>RJ</option>
-            <option selected>MG</option>
-            <option selected>PA</option>
-            <option selected>PL</option>
-            <option selected>MA</option>
-            <option selected>PE</option>
-            <option selected>RO</option>
-            <option selected>PB</option>
-            <option selected>RN</option>
-            <option selected>RS</option>
-            <option selected>RR</option>
-            <option selected>PR</option>
+          <select id="inputEstado" class="form-control" name="estado" required>
+            <option value="AM" selected>AM</option>
+            <option value="AC">AC</option>
+            <option value="AP">AP</option>
+            <option value="AL">AL</option>
+            <option value="BA">BA</option>
+            <option value="CE">CE</option>
+            <option value="GO">GO</option>
+            <option value="MT">MT</option>
+            <option value="MS">MS</option>
+            <option value="SE">SE</option>
+            <option value="DF">DF</option>
+            <option value="SC">SC</option>
+            <option value="SP">SP</option>
+            <option value="TO">TO</option>
+            <option value="RJ">RJ</option>
+            <option value="MG">MG</option>
+            <option value="PA">PA</option>
+            <option value="PL">PL</option>
+            <option value="MA">MA</option>
+            <option value="PE">PE</option>
+            <option value="RO">RO</option>
+            <option value="PB">PB</option>
+            <option value="RN">RN</option>
+            <option value="RS">RS</option>
+            <option value="RR">RR</option>
+            <option value="PR">PR</option>
           </select>
         </div>
 
         <div class="form-group col-md-2">
           <label for="inputCEP">CEP</label>
-          <input type="text" class="form-control" id="inputCEP">
+          <input type="text" class="form-control" id="inputCEP" name="cep">
         </div>
       </div>
 
-      <div class="form-group">
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" id="gridCheck">
-          <label class="form-check-label" for="gridCheck">
-            Clique em mim
-          </label>
-
-        </div>
-      </div>
-      <button type="submit" class="btn btn-primary">Entrar</button>
+      <button type="submit" class="btn btn-primary">Cadastrar</button>
     </form>
   </div>
-
-</div>
 
 <!--Inicio Footer-->
 
@@ -198,7 +195,7 @@
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-
+<script src="js/register.js"></script>
 </body>
 
 </html>
