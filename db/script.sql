@@ -1,0 +1,14 @@
+CREATE DATABASE agencia;
+USE agencia;
+
+CREATE TABLE IF NOT EXISTS usuarios (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(100) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    senha VARCHAR(100)  NOT NULL,
+    rua VARCHAR(100) NOT NULL,
+    logradouro VARCHAR(100) NOT NULL,
+    cidade VARCHAR(100) NOT NULL,
+    cep VARCHAR(8) NOT NULL,
+    estado VARCHAR(2) NOT NULL
+);
