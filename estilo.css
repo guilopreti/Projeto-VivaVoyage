@@ -249,6 +249,9 @@ nav img {
   display: inline-block;
   margin-right: 7px;
 }
+.botao img{
+  width: 40px;
+}
 
 .botao::before {
   content: "";
